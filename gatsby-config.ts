@@ -15,13 +15,14 @@ const config: GatsbyConfig = {
     },
     __key: "pages"
   }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "data",
-      "path": "./src/data/"
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "data",
+        "path": "./src/data/"
+      },
+      __key: "pages"
     },
-    __key: "pages"
-  }]
+  ]
 };
 
 export default config;

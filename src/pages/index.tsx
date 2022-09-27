@@ -1,9 +1,10 @@
-import * as React from "react"
-import { graphql, Link } from "gatsby"
+import * as React from "react";
+import { graphql, Link } from "gatsby";
+import { PageFooter } from "../components/PageFooter";
 
 type Props = {
   data: Queries.Query;
-}
+};
 
 const IndexPage = (props: Props) => {
   return (
@@ -18,9 +19,10 @@ const IndexPage = (props: Props) => {
           )
         }
       </nav>
+      <PageFooter />
     </main>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
 query {
@@ -34,7 +36,7 @@ query {
     }
   }
 }
-`
+`;
 
 
-export default IndexPage
+export default IndexPage;

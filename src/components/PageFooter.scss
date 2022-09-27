@@ -1,0 +1,12 @@
+// @import url('/src/assests/common.scss');
+
+.page-footer {
+    // background-color: $backgroundColor;
+
+    &__link {
+
+        &:hover {
+            color: red;
+        }
+    }
+}

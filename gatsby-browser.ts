@@ -1,0 +1,1 @@
+import "./src/assests/common.scss";
