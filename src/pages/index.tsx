@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 type Props = {
   data: Queries.Query;
@@ -8,16 +8,16 @@ type Props = {
 const IndexPage = (props: Props) => {
   return (
     <main>
-      <ul>
+      <nav>
         {
           props.data.allCitiesCsv?.edges.map(item =>
-            <li key={item.node.title}>
+            <Link key={item.node.title} to={item.node.route!}>
               <h2>{item.node.title}</h2>
               <p>{item.node.subtitle}</p>
-            </li>
+            </Link>
           )
         }
-      </ul>
+      </nav>
     </main>
   )
 }
@@ -27,7 +27,8 @@ query {
   allCitiesCsv {
     edges {
       node {
-        title,
+        route
+        title
         subtitle
       }
     }
