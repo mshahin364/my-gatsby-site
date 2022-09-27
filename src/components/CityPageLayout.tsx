@@ -7,7 +7,7 @@ export type CityPageLayoutContext = {
 
 type Props = PageProps<Queries.Query, CityPageLayoutContext>
 
-export const CityPageLayout: React.FunctionComponent<Props> = (props: Props) => {
+const CityPageLayout: React.FunctionComponent<Props> = (props: Props) => {
     return (
         <main>
             <h1>{props.data.citiesCsv?.title}</h1>
@@ -15,6 +15,7 @@ export const CityPageLayout: React.FunctionComponent<Props> = (props: Props) => 
         </main>
     )
 }
+export default CityPageLayout;
 
 export const pageQuery = graphql`
 query CityPageLayoutQuery($routeName: String) {
